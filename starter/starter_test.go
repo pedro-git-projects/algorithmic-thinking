@@ -1,10 +1,10 @@
-package problems_test
+package starter_test
 
 import (
 	"io"
 	"os"
 	"testing"
-	"thinking/problems"
+	"thinking/starter"
 )
 
 func TestSolution(t *testing.T) {
@@ -12,7 +12,7 @@ func TestSolution(t *testing.T) {
 	r, w, _ := os.Pipe()
 	os.Stdout = w
 
-	p := problems.NewFoodLines(3, 4, 3, 2, 5)
+	p := starter.NewFoodLines(3, 4, 3, 2, 5)
 	p.Solve()
 
 	w.Close()
